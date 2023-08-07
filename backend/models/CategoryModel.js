@@ -9,6 +9,7 @@ const categorySchema = mongose.Schema({
   image: { type: String, default: "/images/category/consoles.jpg" },
   attributes: [{ key: { type: String }, value: [{ type: String }] }],
 });
+categorySchema.index({ description: 1 });
 
 const Category = mongoose.model("Category", categorySchema);
 module.exports = Category;
