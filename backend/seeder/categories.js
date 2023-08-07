@@ -17,7 +17,10 @@ const categories = [
     image: "/images/categories/accesories.jpg",
     attributes: [
       { key: "Storage", value: ["100 GB", "250 GB", "500 GB", "1 TB", "2 TB"] },
-      { key: "Connection type", value: ["USB", "Wireless/Wired", "3.5mm", "HDMI", "Bluetooth"] },
+      {
+        key: "Connection type",
+        value: ["USB", "Wireless/Wired", "3.5mm", "HDMI", "Bluetooth"],
+      },
       { key: "Platform", value: ["Xbox", "Sony", "Nintendo"] },
       { key: "Color", value: ["White", "Black", "Red", "Green"] },
     ],
@@ -38,4 +41,4 @@ const categories = [
   },
 ];
 
-module.exports = categories
+module.exports = categories;
