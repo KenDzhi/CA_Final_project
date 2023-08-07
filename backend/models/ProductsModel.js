@@ -40,7 +40,7 @@ const productSchema = mongoose.Schema(
     },
     attributes: [{ key: { type: String }, value: { type: String } }],
     images: [imageSchema],
-    reviews: [Review],
+    reviews: [],
   },
   {
     timestamps: true,
