@@ -5,33 +5,24 @@ const port = 3000;
 const apiRoutes = require("./routes/apiRoutes");
 
 app.get("/", (req, res) => {
-  console.log("synchronous code");
-  throw new Error("some error occured");
   res.json({ message: "API is running" });
 });
 
-app.get("/a", (req, res, next) => {
-  setTimeout(() => {
-    try {
-      aconsole.log("async code");
-    } catch (error) {
-      next(error);
-    }
-  }, 1000);
-  //   next(new Error("Some error occured"));
-});
+//Prisijungimas prie MongoDB
+const connectToDB = require("./config/db");
+const Product = require("./models/ProductsModel");
+connectToDB();
 
 //API routes bus apdorojama apiRoutes.js faile.
 app.use("/api", apiRoutes);
 
-//API's kurie handlins error'us
-// -> consoleje
+//API rodantis error'us consolje
 app.use((error, req, res, next) => {
   console.error(error);
   next(error);
 });
 
-//Browseryje
+//API's rodantys error'us browser'yje
 app.use((error, req, res, next) => {
   res.status(500).json({
     message: error.message,
