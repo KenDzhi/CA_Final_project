@@ -10,7 +10,8 @@ const reviewSchema = mongoose.Schema(
       required: true,
     },
     user: {
-      // sukurto user'io ID
+      _id: { type: mongoose.Schema.Types.ObjectId, required: true },
+      name: { type: String, required: true },
     },
   },
   {
