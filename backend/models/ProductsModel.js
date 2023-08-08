@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 const Review = require("./ReviewModel");
 
-const imageSchema = mongoose.Schema({
-  path: { type: String, required: true },
-});
-
 const productSchema = mongoose.Schema(
   {
     name: {
@@ -39,15 +35,15 @@ const productSchema = mongoose.Schema(
       default: 0,
     },
     attributes: [{ key: { type: String }, value: { type: String } }],
-    images: [imageSchema],
+    // images: issiaiskinti kaip dealinti su nuotrauku ikelimu,
     reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: Review }],
   },
   {
     timestamps: true,
   }
 );
-productSchema.index();
 
 const Product = mongoose.model("Product", productSchema);
+productSchema.index({ name: "text" }, { name: "TextIndex" });
 
 module.exports = Product;

@@ -32,13 +32,6 @@ const HeaderComponent = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <InputGroup>
-              <DropdownButton id="dropdown-basic-button" title="All">
-                <Dropdown.Item>Xbox consoles</Dropdown.Item>
-                <Dropdown.Item>Playstation consoles</Dropdown.Item>
-                <Dropdown.Item>Nintendo consoles</Dropdown.Item>
-                <Dropdown.Item>Console games</Dropdown.Item>
-              </DropdownButton>
-
               <Form.Control
                 type="text"
                 placeholder="Search for what you desire"

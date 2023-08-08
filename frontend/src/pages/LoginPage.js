@@ -29,7 +29,6 @@ const LoginPage = () => {
         <Col md={6}>
           <h1>Login</h1>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-
             <Form.Group className="mb-3" controlId="formEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
@@ -83,7 +82,6 @@ const LoginPage = () => {
             <Alert show={true} variant="danger">
               User was not found. Check your email or password!
             </Alert>
-
           </Form>
         </Col>
       </Row>
