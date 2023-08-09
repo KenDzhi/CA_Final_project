@@ -235,6 +235,16 @@ const updateUser = async (req, res, next) => {
   }
 };
 
+const deleteUser = async (req, res, next) => {
+  try {
+    const user = User.findById(req.params.id).orFail();
+    await user.deleteOne();
+    res.send("User removed succesfully");
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getUsers,
   registerUser,
@@ -244,4 +254,5 @@ module.exports = {
   writeReview,
   getUser,
   updateUser,
+  deleteUser,
 };

@@ -1,7 +1,7 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -20,18 +20,26 @@ connectToDB();
 //API routes bus apdorojama apiRoutes.js faile.
 app.use("/api", apiRoutes);
 
-//API rodantis error'us consolje
+//API rodantis error'us consoleje
 app.use((error, req, res, next) => {
-  console.error(error);
+  if (process.env.NODE_ENV === "development") {
+    console.error(error);
+  }
   next(error);
 });
 
 //API's rodantys error'us browser'yje
 app.use((error, req, res, next) => {
-  res.status(500).json({
-    message: error.message,
-    stack: error.stack,
-  });
+  if (process.env.NODE_ENV === "development") {
+    res.status(500).json({
+      message: error.message,
+      stack: error.stack,
+    });
+  } else {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 });
 
 app.listen(port, () => {

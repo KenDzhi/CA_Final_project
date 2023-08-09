@@ -1,6 +1,9 @@
 const jwt = require("jsonwebtoken");
 
 const verifyIsLoggedIn = (req, res, next) => {
+  next();
+  return; //sutvarkius userius istrinti
+
   try {
     const token = req.cookies.access_token;
     if (!token) {
@@ -20,6 +23,9 @@ const verifyIsLoggedIn = (req, res, next) => {
 };
 
 const verifyIsAdmin = (req, res, next) => {
+  next();
+  return; //sutvarkius userius istrinti
+
   if (req.user && req.user.isAdmin) {
     next();
   } else {

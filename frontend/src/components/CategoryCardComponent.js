@@ -25,8 +25,8 @@ const CategoryCardComponent = (category, i) => {
     <Container>
       <Row xs={1} md={2} className="g-0 mt-3 mb-5">
         {categories.map((category, i) => (
-          <Card>
-            <Card.Img variant="top" src={images[i]} fluid />
+          <Card key={i}>
+            <Card.Img variant="top" src={images[i]} fluid="true" />
             <Card.Body>
               <Card.Title>{category}</Card.Title>
               <Card.Text>

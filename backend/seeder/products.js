@@ -12,11 +12,11 @@ const products = [
       { key: "Platform", value: "Xbox" },
       { key: "Storage", value: "1TB" },
     ],
-    images: [
-      { path: "/images/categories/consoles.jpg" },
-      { path: "/images/categories/consoles.jpg" },
-      { path: "/images/categories/consoles.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/consoles.jpg" },
+    //   { path: "/images/categories/consoles.jpg" },
+    //   { path: "/images/categories/consoles.jpg" },
+    // ],
     reviews: [],
   },
   {
@@ -32,11 +32,11 @@ const products = [
       { key: "Platform", value: "Sony" },
       { key: "Storage", value: "500 GB" },
     ],
-    images: [
-      { path: "/images/categories/consoles.jpg" },
-      { path: "/images/categories/consoles.jpg" },
-      { path: "/images/categories/consoles.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/consoles.jpg" },
+    //   { path: "/images/categories/consoles.jpg" },
+    //   { path: "/images/categories/consoles.jpg" },
+    // ],
     reviews: [],
   },
   {
@@ -53,11 +53,11 @@ const products = [
       { key: "Connection", value: "Wireless/Wired" },
       { key: "Color", value: "Black" },
     ],
-    images: [
-      { path: "/images/categories/accesories.jpg" },
-      { path: "/images/categories/accesories.jpg" },
-      { path: "/images/categories/accesories.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/accesories.jpg" },
+    //   { path: "/images/categories/accesories.jpg" },
+    //   { path: "/images/categories/accesories.jpg" },
+    // ],
     reviews: [],
   },
   {
@@ -74,11 +74,11 @@ const products = [
       { key: "Connection", value: "Wireless/Wired" },
       { key: "Color", value: "White" },
     ],
-    images: [
-      { path: "/images/categories/accesories.jpg" },
-      { path: "/images/categories/accesories.jpg" },
-      { path: "/images/categories/accesories.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/accesories.jpg" },
+    //   { path: "/images/categories/accesories.jpg" },
+    //   { path: "/images/categories/accesories.jpg" },
+    // ],
     reviews: [],
   },
   {
@@ -91,11 +91,11 @@ const products = [
     rating: 4,
     reviewsNumber: 141,
     attributes: [{ key: "Platform", value: "Xbox" }],
-    images: [
-      { path: "/images/categories/games.jpg" },
-      { path: "/images/categories/games.jpg" },
-      { path: "/images/categories/games.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/games.jpg" },
+    //   { path: "/images/categories/games.jpg" },
+    //   { path: "/images/categories/games.jpg" },
+    // ],
     reviews: [],
   },
   {
@@ -108,11 +108,11 @@ const products = [
     rating: 4,
     reviewsNumber: 141,
     attributes: [{ key: "Platform", value: "Sony" }],
-    images: [
-      { path: "/images/categories/games.jpg" },
-      { path: "/images/categories/games.jpg" },
-      { path: "/images/categories/games.jpg" },
-    ],
+    // images: [
+    //   { path: "/images/categories/games.jpg" },
+    //   { path: "/images/categories/games.jpg" },
+    //   { path: "/images/categories/games.jpg" },
+    // ],
     reviews: [],
   },
 ];

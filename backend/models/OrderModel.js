@@ -16,11 +16,17 @@ const orderSchema = mongoose.Schema(
       {
         name: { type: String, required: true },
         price: { type: Number, required: true },
-        image: { type: String, required: true },
+        // image: { type: String, required: true },
         quantity: { type: Number, required: true },
         count: { type: Number, required: true },
       },
     ],
+
+    paymentMethod: {
+      type: String,
+      required: true,
+    },
+
     transactionResult: {
       status: { type: String },
       createTime: { type: String },
